@@ -15,7 +15,7 @@ public class Employee {
 	
 	
 	public void getSalaryByRole(int role) {
-		this.role = 1;
+		this.role = role;
 		setSalary();
 		System.out.println(salary);
 	}
@@ -25,11 +25,14 @@ public class Employee {
 		switch (role) {
 		case 1: 
 			salary = new BigDecimal("20000.20");
+			break;
 		case 2: 
 			salary = new BigDecimal("40000.20");
+			break;
 		default:
 			salary = new BigDecimal("10000.20");
 			System.out.println("Unexpected value: " + role);
+			break;
 		}
 	}
 }
